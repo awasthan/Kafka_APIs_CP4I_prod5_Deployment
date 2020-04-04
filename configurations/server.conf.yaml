@@ -1,0 +1,6 @@
+---
+ResourceManagers:
+ JVM:
+   truststoreType: 'JKS'
+   truststoreFile: '/home/aceuser/ace-server/truststore.jks'
+   truststorePass: 'ace-server::truststorePass'

@@ -1,0 +1,2 @@
+kafka::myKafkaSecId ac-producer vPFgB8xvJ3JqcGYKk_rfNsl_MQWWMX5OpoBoIP3bkn2m
+ace-server::truststorePass dummy password
