@@ -22,10 +22,10 @@ cp ${ACE_APP2}_DEV_${ACE_APP2_VERSION}.bar /var/lib/jenkins/jobs/${JOB_NAME}/wor
 cd ${WORKSPACE}
 cloudctl login -a ${ICP_CONSOLE_URL} -n ${Namespace} -u ${CP4I_User} -p ${CP4I_Password} –-skip-ssl-validation
 oc project ${Namespace}
-docker login ${OpenshiftRegistryURL} -u $(oc whoami) -p $(oc whoami -t)
+docker login ${OCP_Registry_External_URL} -u $(oc whoami) -p $(oc whoami -t)
 docker build -t ${imagename}:${BUILD_NUMBER} .
-docker tag ${imagename}:${BUILD_NUMBER} ${OpenshiftRegistryURL}/${Namespace}/${imagename}:${tag}-amd64
-docker push ${OpenshiftRegistryURL}/${Namespace}/${imagename}:${tag}-amd64
+docker tag ${imagename}:${BUILD_NUMBER} ${OCP_Registry_External_URL}/${Namespace}/${imagename}:${tag}-amd64
+docker push ${OCP_Registry_External_URL}/${Namespace}/${imagename}:${tag}-amd64
 cd configurations
 #Delete the secret if already exists. It would exist in case of upgrading the release
 oc delete secret ${ReleaseName}-secret
