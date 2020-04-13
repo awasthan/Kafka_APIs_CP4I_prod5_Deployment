@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<policies>
+  <policy policyType="Kafka" policyName="Kafka_Consumer" policyTemplate="Kafka">
+    <bootstrapServers>eventstreams-rel-ibm-es-proxy-route-bootstrap-eventstreams.apps.prod5.os.fyre.ibm.com:443</bootstrapServers>
+    <securityProtocol>SASL_SSL</securityProtocol>
+    <sslProtocol>TLSv1.2</sslProtocol>
+    <securityIdentity>myKafkaSecId</securityIdentity>
+    <saslConfig></saslConfig>
+    <sslKeystoreLocation></sslKeystoreLocation>
+    <sslKeystoreSecurityIdentity></sslKeystoreSecurityIdentity>
+    <sslKeySecurityIdentity></sslKeySecurityIdentity>
+    <sslTruststoreLocation></sslTruststoreLocation>
+    <sslTruststoreSecurityIdentity></sslTruststoreSecurityIdentity>
+    <sslEnableCertificateHostnameChecking>false</sslEnableCertificateHostnameChecking>
+  </policy>
+  <policy policyType="Kafka" policyName="Kafka_producer" policyTemplate="Kafka">
+    <bootstrapServers>eventstreams-rel-ibm-es-proxy-route-bootstrap-eventstreams.apps.prod5.os.fyre.ibm.com:443</bootstrapServers>
+    <securityProtocol>SASL_SSL</securityProtocol>
+    <sslProtocol>TLSv1.2</sslProtocol>
+    <securityIdentity>myKafkaSecId</securityIdentity>
+    <saslConfig></saslConfig>
+    <sslKeystoreLocation></sslKeystoreLocation>
+    <sslKeystoreSecurityIdentity></sslKeystoreSecurityIdentity>
+    <sslKeySecurityIdentity></sslKeySecurityIdentity>
+    <sslTruststoreLocation></sslTruststoreLocation>
+    <sslTruststoreSecurityIdentity></sslTruststoreSecurityIdentity>
+    <sslEnableCertificateHostnameChecking>false</sslEnableCertificateHostnameChecking>
+  </policy>
+</policies>
